@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteResponse",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "post_result"
+      ],
+      "properties": {
+        "post_result": {
+          "$ref": "#/definitions/PostResultResponse"
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "PostResultResponse": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/ResponseStatus"
+        }
+      }
+    },
+    "ResponseStatus": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failure"
+      ]
+    }
+  }
+}

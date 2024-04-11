@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "set_viewing_key"
+      ],
+      "properties": {
+        "set_viewing_key": {
+          "type": "object",
+          "required": [
+            "viewing_key"
+          ],
+          "properties": {
+            "padding": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "viewing_key": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}
